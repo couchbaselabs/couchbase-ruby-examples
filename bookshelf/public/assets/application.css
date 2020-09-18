@@ -1,0 +1,113 @@
+body {
+    background-color: #929292;
+    font-family: Verdana, Helvetica, Arial;
+    font-size: 14px;
+}
+
+a img {
+    border: none;
+}
+
+a {
+    color: #0000FF;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+#container {
+    width: 75%;
+    margin: 0 auto;
+    background-color: #FFF;
+    padding: 20px 40px;
+    border: solid 1px black;
+    margin-top: 20px;
+}
+
+#flash_notice, #flash_error {
+    padding: 5px 8px;
+    margin: 10px 0;
+}
+
+#flash_notice {
+    background-color: #CFC;
+    border: solid 1px #6C6;
+}
+
+#flash_error {
+    background-color: #FCC;
+    border: solid 1px #C66;
+}
+
+ul.books {
+    list-style: none;
+    padding-left: 0;
+}
+
+.book {
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.book .author {
+    margin-top: -2em;
+}
+
+.book .description, .book .description p {
+    line-height: 1.1em;
+}
+
+.book img {
+    float: right;
+    border: solid 1px black;
+    margin: 0 10px;
+}
+
+.reviews .subject {
+    width: 500px;
+}
+
+.reviews .reviewer {
+    width: 400px;
+}
+
+.reviews input[type="submit"] {
+    width: 90px;
+}
+
+.reviews textarea {
+    font-family: Verdana, Helvetica, Arial;
+    font-size: 14px;
+    width: 500px;
+}
+
+.reviews form {
+    padding-left: 40px;
+}
+
+.reviews ul, ul.meta, ul#pager {
+    list-style: none;
+}
+
+.reviews li {
+    margin-bottom: 1em;
+    border-top: dotted 1px grey;
+}
+.reviews .reviewer {
+    color: grey;
+    margin-top: -1.5em;
+}
+.reviews li p {
+    line-height: 1.1em;
+}
+
+#pager li {
+    display: inline;
+}
+
+#pager li.current {
+    font-weight: bold;
+}

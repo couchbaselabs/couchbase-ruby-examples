@@ -1,0 +1,42 @@
+<h1><a href="/">Bookshelf</a></h1>
+<div class="book">
+  <h2><%= @book.title %></h2>
+  <p class="author">
+    by <em><%= @book.author %></em>
+  </p>
+  <div class="description">
+    <img src="<%= @book.image_url %>" />
+    <%= @book.description %>
+  </div>
+  <ul class="meta">
+    <li><strong>Category:</strong> <%= @book.category %></li>
+    <li><strong>Publisher:</strong> <%= @book.publisher %></li>
+    <li><strong>ISBN:</strong> <%= @book.isbn %> (ISBN13: <%= @book.isbn13 %>)</li>
+    <li><strong>Year:</strong> <%= @book.year %></li>
+    <li><strong>Average Rating:</strong> <%= @book.average_rating %> (<%= @book.ratings_count %> votes)</li>
+    <li><strong>URL:</strong> <a href="<%= @book.goodreads_url %>"><%= @book.goodreads_url %></a></li>
+  </ul>
+</div>
+<div class="reviews">
+  <% if @book.has_reviews? %>
+    <ul>
+      <% @book.reviews.each do |review| %>
+        <li>
+          <h3><%= review.subject %></h3>
+          <p class="reviewer">
+            by <em><%= review.reviewer %></em>
+            on <em><%= review.date %> </em>
+          </p>
+          <p><%= review.content %></p>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <form method="POST" action="/review">
+    <input name="id" type="hidden" value="<%= @book.id %>"/>
+    <input class="subject" name="review[subject]" type="text" placeholder="Subject" required/><br/>
+    <textarea name="review[content]" placeholder="Review Content..." required></textarea><br/>
+    <input class="reviewer" name="review[reviewer]" type="text" placeholder="Your Name"/>
+    <input type="submit" value="Send"/>
+  </form>
+</div>

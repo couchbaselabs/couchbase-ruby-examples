@@ -1,0 +1,13 @@
+couchbase:
+  address: couchbase://localhost
+  bucket: default
+  username: Administrator
+  password: password
+
+# the following section only used by importer script
+#
+# to create personal API key, visit
+# https://www.goodreads.com/api/keys
+goodreads:
+  key:
+  secret:

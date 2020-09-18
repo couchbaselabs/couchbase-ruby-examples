@@ -1,0 +1,35 @@
+<h1><a href="/">Bookshelf</a></h1>
+
+<form action="/search">
+  <input type="text" name="query" placeholder="type search query" autofocus />
+  <input type="submit" value="Search" />
+</form>
+
+<% if @books[:total_pages] > 1 %>
+  <ul id="pager">
+    <% (1..@books[:total_pages]).each do |page| %>
+      <% if page == @books[:page] %>
+        <li class="current"><%= page %></li>
+      <% else %>
+        <li><a href="<%= params[:query] ? "/search?query=#{params[:query]}&" : "/?" %>page=<%= page %>"><%= page %></a></li>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>
+
+<ul class="books">
+  <% @books[:rows].each do |book| %>
+  <li class="book">
+    <h2><a href="<%= book.url %>"><%= book.title %></a></h2>
+    <p class="author">
+      by <em><%= book.author %></em>
+    </p>
+    <div class="description">
+      <img src="<%= book.image_url %>" />
+      <%= book.description %>
+    </div>
+  </li>
+  <% end %>
+</ul>
+
+<div class="clear">
