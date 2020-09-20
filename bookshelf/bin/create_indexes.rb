@@ -13,6 +13,7 @@ options = Couchbase::Management::QueryIndexManager::CreatePrimaryIndexOptions.ne
 options.ignore_if_exists = true
 cluster.query_indexes.create_primary_index(config["bucket"], options)
 
+cluster.search_indexes.drop_index("books-index")
 index = Couchbase::Management::SearchIndex.new
 index.type = "fulltext-index"
 index.name = "books-index"
