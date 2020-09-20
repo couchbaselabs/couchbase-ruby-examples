@@ -1,9 +1,12 @@
 <h1><a href="/">Bookshelf</a></h1>
 
 <form action="/search">
-  <input type="text" name="query" placeholder="type search query" autofocus />
+  <input type="text" name="query" placeholder="type search query" value="<%= params[:query] %>" autofocus />
   <input type="submit" value="Search" />
 </form>
+<% if params[:query] && @books[:total_rows] %>
+  <p>Search result <em><%= params[:query] %></em> returned back <strong><%= @books[:total_rows] %></strong> results</p>
+<% end %>
 
 <% if @books[:total_pages] > 1 %>
   <ul id="pager">

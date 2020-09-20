@@ -70,6 +70,7 @@ class Storage
     {
       page: page,
       total_pages: total_pages,
+      total_rows: res.meta_data.metrics.total_rows,
       rows: res.rows.map { |row| BookFromSearchPresenter.new(row, @collection) },
     }
   end
