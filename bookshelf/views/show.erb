@@ -32,6 +32,7 @@
       <% end %>
     </ul>
   <% end %>
+  <p>Submit new review</p>
   <form method="POST" action="/review">
     <input name="id" type="hidden" value="<%= @book.id %>"/>
     <input class="subject" name="review[subject]" type="text" placeholder="Subject" required/><br/>
