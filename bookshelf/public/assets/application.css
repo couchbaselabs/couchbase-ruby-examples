@@ -53,7 +53,7 @@ ul.books {
 }
 
 .book .author {
-    margin-top: -2em;
+    margin-top: 0em;
 }
 
 .book .description, .book .description p {
