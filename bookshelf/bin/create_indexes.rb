@@ -20,6 +20,7 @@ index.source_type = "couchbase"
 index.source_name = config["bucket"]
 index.params = {
   mapping: {
+    default_mapping: {enabled: false},
     types: {
       "book" => {
         properties: {
