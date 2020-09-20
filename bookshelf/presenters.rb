@@ -87,7 +87,7 @@ class BookPresenter
 
   def reviews
     return [] unless has_reviews?
-    @data["reviews"].map { |entry| Review.new(entry) }
+    @data["reviews"].map { |entry| ReviewPresenter.new(entry) }
   end
 end
 

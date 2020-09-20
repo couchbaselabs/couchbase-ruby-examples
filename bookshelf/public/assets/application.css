@@ -74,7 +74,7 @@ ul.books {
     width: 500px;
 }
 
-.reviews .reviewer {
+.reviews input.reviewer {
     width: 400px;
 }
 
@@ -100,10 +100,16 @@ ul.books {
     margin-bottom: 1em;
     border-top: dotted 1px grey;
 }
+
+.reviews li > h3 {
+    margin-bottom: 0em;
+}
+
 .reviews .reviewer {
     color: grey;
-    margin-top: -1.5em;
+    margin-top: 0em;
 }
+
 .reviews li p {
     line-height: 1.1em;
 }
