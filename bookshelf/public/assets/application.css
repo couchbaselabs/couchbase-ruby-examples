@@ -52,6 +52,10 @@ ul.books {
     margin-bottom: 10px;
 }
 
+.book > h2 {
+    margin-bottom: 0em;
+}
+
 .book .author {
     margin-top: 0em;
 }
