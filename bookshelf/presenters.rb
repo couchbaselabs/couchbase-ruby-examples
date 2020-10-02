@@ -125,7 +125,7 @@ class BookFromSearchPresenter
     if @data.fragments.key?(field)
       @data.fragments[field].join("...")
         .force_encoding(Encoding::UTF_8)
-        .gsub(/<(em|b|i)\s*\/?>/, '')
+        .gsub(/<(em|b|i)\s*\/?>/, "")
     end
   end
 
