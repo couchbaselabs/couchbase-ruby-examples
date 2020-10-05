@@ -1,5 +1,5 @@
 couchbase:
-  address: couchbase://localhost
+  address: couchbase://localhost?show_queries=true
   bucket: default
   username: Administrator
   password: password

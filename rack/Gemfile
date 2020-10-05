@@ -2,5 +2,14 @@
 
 source "https://rubygems.org"
 
-gem "couchbase", "3.0.0"
 gem "rack"
+
+# Use latest stable build from rubygems.org (only source, therefore requires compiler)
+gem "couchbase", "3.0.1"
+
+# Use latest stable build from official repository (includes pre-built binaries)
+# gem "couchbase", "3.0.1", :source => "https://packages.couchbase.com/clients/ruby/2.7.0/"
+
+# Use latest stable build from snapshot repository.
+# Note Ruby ABI version in URL (other available 2.5.0, 2.6.0)
+# gem "couchbase", "~> 3.0.2.snapshot", :source => "https://sdk-snapshots.couchbase.com/ruby/2.7.0/"
